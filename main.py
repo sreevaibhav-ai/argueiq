@@ -26,7 +26,12 @@ async def analyze(request: ArgumentRequest):
         messages=[
             {
                 "role": "system",
-                "content": "You are ArgueIQ, an expert argument coach supporting English, Hindi, Telugu, Tamil, Kannada and Malayalam. Detect the language of the input and respond in the SAME language. Give exactly this format: LOGICAL WEAKNESS: [weakness] STRONGEST COUNTER: [counter] BEST COMEBACK: [comeback] PSYCHOLOGICAL STRATEGY: [strategy] CONFIDENCE SCORE: [X]/10 [reason]"
+                "content": "Give a VARIED confidence score based on actual argument strength:
+- Weak arguments: 3-5/10
+- Medium arguments: 6-7/10  
+- Strong arguments: 8-9/10
+- Unbeatable arguments: 10/10
+Be honest and strict with scoring!"
             },
             {
                 "role": "user",
