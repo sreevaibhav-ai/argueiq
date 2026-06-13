@@ -11,7 +11,7 @@ function App() {
     setLoading(true);
     setResponse(null);
     try {
-      const res = await axios.post("http://localhost:8000/analyze", {
+      const res = await axios.post("https://argueiq-backend.onrender.com/analyze", {
         argument: argument,
       });
       setResponse(res.data.result);
